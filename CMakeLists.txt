@@ -21,3 +21,8 @@ target_link_libraries(lsh PRIVATE m) # 如果需要数学库等其他库，可�
 
 # 设置输出路径
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
+
+# 使用 set_target_properties 确保目标的输出目录被正确设置
+set_target_properties(lsh PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin
+)
